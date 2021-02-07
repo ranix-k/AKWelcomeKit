@@ -8,10 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		206C371B2230D5618B096A855E810858 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		3BF4D134B04E8D737F3658CFDA234958 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7920FEFDBF6773216F91C689A507F5E7 /* ReplaceMe.swift */; };
 		4BFE90A57AF8A17BA82A79E611DC4967 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		556C5F537BDA5DBE8F00F0D0D38C1870 /* Pods-AKWelcomeKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 179D74A83389B51199E3674F20246FC3 /* Pods-AKWelcomeKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8791192E57FAEF4883E3C3F8DA54EF95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		8A12274C25D083C2009A0E97 /* AKWKController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A12274B25D083C2009A0E97 /* AKWKController.swift */; };
+		8A12275925D083E2009A0E97 /* AKWKProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A12275825D083E2009A0E97 /* AKWKProtocols.swift */; };
+		8A12276325D08405009A0E97 /* AKWKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A12276225D08405009A0E97 /* AKWKView.swift */; };
+		8A12276B25D0841B009A0E97 /* AKWKSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A12276A25D0841B009A0E97 /* AKWKSettings.swift */; };
+		8A12277025D0842A009A0E97 /* AKWKOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A12276F25D0842A009A0E97 /* AKWKOverlay.swift */; };
+		8A12277525D0843A009A0E97 /* AKWKPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A12277425D0843A009A0E97 /* AKWKPage.swift */; };
 		C3CCF2D59C9896FBFFCBAEEC7B0592E1 /* Pods-AKWelcomeKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BAD219C4B4030916A2740E2E5834D76 /* Pods-AKWelcomeKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D1627ACDB197B76D67CBC13A29971DC6 /* AKWelcomeKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 56487B0D4C79C050F25A1760221CC78B /* AKWelcomeKit-dummy.m */; };
 		DB710CE83AD9384182A6D96E065D2779 /* Pods-AKWelcomeKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 078E4525C3AB1175D30B762FF0A02308 /* Pods-AKWelcomeKit_Tests-dummy.m */; };
@@ -57,9 +62,14 @@
 		6E36C6B2CDD6AD7E0F9ADF22257CBDC1 /* Pods-AKWelcomeKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AKWelcomeKit_Example-Info.plist"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		78536717B4EB8C5CF3896DDBAC864BE8 /* Pods-AKWelcomeKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AKWelcomeKit_Tests-Info.plist"; sourceTree = "<group>"; };
-		7920FEFDBF6773216F91C689A507F5E7 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = AKWelcomeKit/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		7D8D7B7211B3A2AB342406F1AF19B607 /* AKWelcomeKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AKWelcomeKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		818B7D49E0F78742D8249C2BD6DE0781 /* Pods-AKWelcomeKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AKWelcomeKit_Tests.modulemap"; sourceTree = "<group>"; };
+		8A12274B25D083C2009A0E97 /* AKWKController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AKWKController.swift; path = AKWelcomeKit/Classes/AKWKController.swift; sourceTree = "<group>"; };
+		8A12275825D083E2009A0E97 /* AKWKProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AKWKProtocols.swift; path = AKWelcomeKit/Classes/AKWKProtocols.swift; sourceTree = "<group>"; };
+		8A12276225D08405009A0E97 /* AKWKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AKWKView.swift; path = AKWelcomeKit/Classes/AKWKView.swift; sourceTree = "<group>"; };
+		8A12276A25D0841B009A0E97 /* AKWKSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AKWKSettings.swift; path = AKWelcomeKit/Classes/AKWKSettings.swift; sourceTree = "<group>"; };
+		8A12276F25D0842A009A0E97 /* AKWKOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AKWKOverlay.swift; path = AKWelcomeKit/Classes/AKWKOverlay.swift; sourceTree = "<group>"; };
+		8A12277425D0843A009A0E97 /* AKWKPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AKWKPage.swift; path = AKWelcomeKit/Classes/AKWKPage.swift; sourceTree = "<group>"; };
 		92E437D277F897C770FBA2127B61D9D2 /* AKWelcomeKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AKWelcomeKit.debug.xcconfig; sourceTree = "<group>"; };
 		96684E82DD7AC0458A91E028195378C1 /* Pods-AKWelcomeKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AKWelcomeKit_Example.modulemap"; sourceTree = "<group>"; };
 		97D5322DA5D96FC861DE808E9EAB0F17 /* Pods-AKWelcomeKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AKWelcomeKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -113,9 +123,14 @@
 		1B9620D25133C4DC29EC8F84A8913B10 /* AKWelcomeKit */ = {
 			isa = PBXGroup;
 			children = (
-				7920FEFDBF6773216F91C689A507F5E7 /* ReplaceMe.swift */,
 				0183A937FB4BD70E76CD4F06614076BA /* Pod */,
 				6FB1DF6941F329DE6615C6AB332E007A /* Support Files */,
+				8A12274B25D083C2009A0E97 /* AKWKController.swift */,
+				8A12275825D083E2009A0E97 /* AKWKProtocols.swift */,
+				8A12276225D08405009A0E97 /* AKWKView.swift */,
+				8A12276A25D0841B009A0E97 /* AKWKSettings.swift */,
+				8A12276F25D0842A009A0E97 /* AKWKOverlay.swift */,
+				8A12277425D0843A009A0E97 /* AKWKPage.swift */,
 			);
 			name = AKWelcomeKit;
 			path = ../..;
@@ -380,8 +395,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A12276B25D0841B009A0E97 /* AKWKSettings.swift in Sources */,
+				8A12277525D0843A009A0E97 /* AKWKPage.swift in Sources */,
+				8A12275925D083E2009A0E97 /* AKWKProtocols.swift in Sources */,
+				8A12277025D0842A009A0E97 /* AKWKOverlay.swift in Sources */,
+				8A12276325D08405009A0E97 /* AKWKView.swift in Sources */,
 				D1627ACDB197B76D67CBC13A29971DC6 /* AKWelcomeKit-dummy.m in Sources */,
-				3BF4D134B04E8D737F3658CFDA234958 /* ReplaceMe.swift in Sources */,
+				8A12274C25D083C2009A0E97 /* AKWKController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 92E437D277F897C770FBA2127B61D9D2 /* AKWelcomeKit.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -525,16 +546,19 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AKWelcomeKit/AKWelcomeKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/AKWelcomeKit/AKWelcomeKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
 				MODULEMAP_FILE = "Target Support Files/AKWelcomeKit/AKWelcomeKit.modulemap";
 				PRODUCT_MODULE_NAME = AKWelcomeKit;
 				PRODUCT_NAME = AKWelcomeKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -608,6 +632,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1962253C33FED9EA1532BB14E57E44E5 /* AKWelcomeKit.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -619,16 +644,18 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AKWelcomeKit/AKWelcomeKit-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/AKWelcomeKit/AKWelcomeKit-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
 				MODULEMAP_FILE = "Target Support Files/AKWelcomeKit/AKWelcomeKit.modulemap";
 				PRODUCT_MODULE_NAME = AKWelcomeKit;
 				PRODUCT_NAME = AKWelcomeKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
