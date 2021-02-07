@@ -23,4 +23,4 @@ end
 
 ## License
 
-AKWelcomeKit is released under the MIT license. See [LICENSE](./LICENSE.txt) for details.
+AKWelcomeKit is released under the MIT license. See [LICENSE](./LICENSE) for details.
