@@ -1,0 +1,6 @@
+framework module AKWelcomeKit {
+  umbrella header "AKWelcomeKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

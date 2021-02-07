@@ -1,0 +1,16 @@
+PODS:
+  - AKWelcomeKit (0.1.0)
+
+DEPENDENCIES:
+  - AKWelcomeKit (from `../`)
+
+EXTERNAL SOURCES:
+  AKWelcomeKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AKWelcomeKit: e94e24763325f9b2b0f7b70c51b7ef92f7fc712f
+
+PODFILE CHECKSUM: e73b4dfbfc450036b72c0310722507be6b5a5a11
+
+COCOAPODS: 1.10.0
