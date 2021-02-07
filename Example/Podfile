@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'AKWelcomeKit_Example' do
+  pod 'AKWelcomeKit', :path => '../'
+
+  target 'AKWelcomeKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
