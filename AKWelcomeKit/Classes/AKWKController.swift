@@ -49,4 +49,13 @@ public extension UIViewController {
         
         present(wkController, animated: animated, completion: completion)
     }
+    
+    func pushWKController(delegate: AKWKDelegate?, dataSource: AKWKDataSource, animated: Bool, completion: @escaping () -> Void = {}) {
+        let wkController = AKWKController()
+        wkController.set(delegate: delegate, dataSource: dataSource)
+                
+        AKWKSettings.shared.presentedWKController = wkController
+        
+        navigationController?.pushViewController(wkController, animated: animated)
+    }
 }

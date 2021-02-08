@@ -9,12 +9,14 @@
 import UIKit
 import AKWelcomeKit
 
-class ViewController: UIViewController, AKWKDataSource {
+class ViewController: UIViewController, AKWKDataSource, AKWKDelegate {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        presentWKController(delegate: nil, dataSource: self, animated: true)
+        presentWKController(delegate: self, dataSource: self, animated: true)
     }
+    
+    // DataSource
 
     func wkNumberOfPages(_ wk: AKWKController) -> Int {
         return 3
@@ -27,5 +29,15 @@ class ViewController: UIViewController, AKWKDataSource {
         page.textLabel.text = "index \(index)"
         
         return page
+    }
+    
+    // Delegate
+    
+    func wk(_ wk: AKWKController, continueTapped pageIndex: Int) {
+        guard pageIndex == 2 else {
+            return
+        }
+        
+        wk.dismiss(animated: true, completion: nil)
     }
 }

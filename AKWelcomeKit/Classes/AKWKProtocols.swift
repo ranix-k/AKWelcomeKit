@@ -11,12 +11,14 @@ public protocol AKWKDelegate: class {
     
     func wk(_ wk: AKWKController, currentPage index: Int)
     func wk(_ wk: AKWKController, tapped index: Int)
+    func wk(_ wk: AKWKController, continueTapped pageIndex: Int)
 }
 
 public extension AKWKDelegate {
     
     func wk(_ wk: AKWKController, currentPage index: Int) {}
     func wk(_ wk: AKWKController, tapped index: Int) {}
+    func wk(_ wk: AKWKController, continueTapped pageIndex: Int) {}
 }
 
 public protocol AKWKDataSource: class {

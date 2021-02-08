@@ -121,11 +121,9 @@ class AKWKView: UIView, UIScrollViewDelegate {
     @objc private func continueAction() {
         let index = currentPage
         
+        delegate?.wk(wkController, continueTapped: index)
+        
         guard index < pageCount - 1 else {
-            wkController.dismiss(animated: true, completion: {
-                AKWKSettings.shared.presentedWKController = nil
-            })
-            
             return
         }
         
