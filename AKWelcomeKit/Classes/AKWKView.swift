@@ -36,7 +36,18 @@ class AKWKView: UIView, UIScrollViewDelegate {
     fileprivate var pageCount = 0
     open var shouldSwipe = true
     
-    fileprivate var overlay: AKWKOverlay?
+    fileprivate var background: AKWKBackground? {
+        didSet {
+            wkController.background = background
+        }
+    }
+    
+    fileprivate var overlay: AKWKOverlay? {
+        didSet {
+            wkController.overlay = overlay
+        }
+    }
+    
     fileprivate var pages = [AKWKPage]()
     
     override init(frame: CGRect) {
@@ -48,6 +59,7 @@ class AKWKView: UIView, UIScrollViewDelegate {
     }
     
     private func loadView() {
+        setUpBackgroundView()
         setUpContainerView()
         setUpPages()
         setOverlayView()
@@ -61,6 +73,17 @@ class AKWKView: UIView, UIScrollViewDelegate {
         if dataSourceSet {
             loadView()
             dataSourceSet = false
+        }
+    }
+    
+    fileprivate func setUpBackgroundView() {
+        if let dataSource = dataSource {
+            if let background = dataSource.wkBackgroundView(wkController) {
+                self.addSubview(background)
+                background.frame = self.frame
+                
+                self.background = background
+            }
         }
     }
     
@@ -86,14 +109,15 @@ class AKWKView: UIView, UIScrollViewDelegate {
                     self.pages.append(view)
                 }
             }
+            
             containerView.contentSize = CGSize(width: self.frame.width * CGFloat(pageCount), height: self.frame.height)
+            overlay?.page(count: self.pageCount)
         }
     }
     
     fileprivate func setOverlayView() {
         if let dataSource = dataSource {
             if let overlay = dataSource.wkViewForOverlay(wkController) {
-                overlay.page(count: self.pageCount)
                 self.addSubview(overlay)
                 self.bringSubviewToFront(overlay)
                 let viewFrame = CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height)
@@ -121,7 +145,7 @@ class AKWKView: UIView, UIScrollViewDelegate {
     @objc private func continueAction() {
         let index = currentPage
         
-        delegate?.wk(wkController, continueTapped: index)
+        delegate?.wk(wkController, tapped: true, currentPage: index + 1)
         
         guard index < pageCount - 1 else {
             return
@@ -142,7 +166,7 @@ class AKWKView: UIView, UIScrollViewDelegate {
     
     open func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let currentPage = Int(getCurrentPosition())
-        self.delegate?.wk(wkController, currentPage: currentPage)
+        self.delegate?.wk(wkController, tapped: false, currentPage: currentPage)
     }
     
     open func scrollViewDidScroll(_ scrollView: UIScrollView) {

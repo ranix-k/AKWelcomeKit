@@ -7,9 +7,9 @@
 
 import UIKit
 
-public class AKWKPage: UIView {
+open class AKWKPage: UIView {
         
-    open var imageView: UIImageView = {
+    @IBOutlet open var imageView: UIImageView! = {
         let i = UIImageView()
         i.contentMode = .scaleAspectFit
         i.translatesAutoresizingMaskIntoConstraints = false
@@ -17,7 +17,7 @@ public class AKWKPage: UIView {
         return i
     }()
     
-    open var textLabel: UILabel = {
+    @IBOutlet open var textLabel: UILabel! = {
         let l = UILabel()
         l.font = AKWKSettings.shared.pageTextFont
         l.textColor = AKWKSettings.shared.pageTextColor
@@ -31,12 +31,13 @@ public class AKWKPage: UIView {
     
     private var initialized = false
     
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initialized = true
     }
     
     public override func layoutSubviews() {
@@ -51,8 +52,8 @@ public class AKWKPage: UIView {
         
         initialized = true
         
-        backgroundColor = UIColor(red: 46/255, green: 35/255, blue: 66/255, alpha: 1.0)
-        
+        backgroundColor = .clear
+                
         addSubview(imageView)
         addSubview(textLabel)
                 

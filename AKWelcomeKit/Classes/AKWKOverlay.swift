@@ -7,26 +7,26 @@
 
 import UIKit
 
-public class AKWKOverlay: UIView, WKOverlayProtocol {
+open class AKWKOverlay: UIView {
     
-    open var pageControl: UIPageControl = {
+    @IBOutlet open var pageControl: UIPageControl! = {
         let pageControl = UIPageControl()
         pageControl.currentPage = 0
         pageControl.currentPageIndicatorTintColor = AKWKSettings.shared.overlayCurrentPageIndicatorTintColor
         pageControl.pageIndicatorTintColor = AKWKSettings.shared.overlayPageIndicatorTintColor
         pageControl.translatesAutoresizingMaskIntoConstraints = false
-        
+
         return pageControl
     }()
     
-    open var continueButton: UIButton = {
+    @IBOutlet open var continueButton: UIButton! = {
         let button = UIButton(type: .system)
         button.layer.cornerRadius = 7
         button.titleLabel?.font = AKWKSettings.shared.overlayContinueFont
         button.setTitleColor(AKWKSettings.shared.overlayContinueTextColor, for: .normal)
         button.backgroundColor = AKWKSettings.shared.overlayContinueBackgroundColor
-        button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle(AKWKSettings.shared.overlayContinueText, for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
         
         return button
     }()
@@ -45,6 +45,8 @@ public class AKWKOverlay: UIView, WKOverlayProtocol {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
+        initialized = true
     }
     
     override open func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
@@ -70,6 +72,8 @@ public class AKWKOverlay: UIView, WKOverlayProtocol {
         }
         
         initialized = true
+        
+        backgroundColor = .clear
         
         addSubview(pageControl)
         addSubview(continueButton)

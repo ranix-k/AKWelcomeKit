@@ -12,6 +12,9 @@ public class AKWKController: UIViewController {
     private weak var delegate: AKWKDelegate?
     private weak var dataSource: AKWKDataSource?
     
+    open weak var background: AKWKBackground?
+    open weak var overlay: AKWKOverlay?
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,14 +51,5 @@ public extension UIViewController {
         AKWKSettings.shared.presentedWKController = wkController
         
         present(wkController, animated: animated, completion: completion)
-    }
-    
-    func pushWKController(delegate: AKWKDelegate?, dataSource: AKWKDataSource, animated: Bool, completion: @escaping () -> Void = {}) {
-        let wkController = AKWKController()
-        wkController.set(delegate: delegate, dataSource: dataSource)
-                
-        AKWKSettings.shared.presentedWKController = wkController
-        
-        navigationController?.pushViewController(wkController, animated: animated)
     }
 }

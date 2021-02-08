@@ -17,6 +17,7 @@
 		8A12276B25D0841B009A0E97 /* AKWKSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A12276A25D0841B009A0E97 /* AKWKSettings.swift */; };
 		8A12277025D0842A009A0E97 /* AKWKOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A12276F25D0842A009A0E97 /* AKWKOverlay.swift */; };
 		8A12277525D0843A009A0E97 /* AKWKPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A12277425D0843A009A0E97 /* AKWKPage.swift */; };
+		8A1228EC25D1C936009A0E97 /* AKWKBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1228EB25D1C936009A0E97 /* AKWKBackground.swift */; };
 		C3CCF2D59C9896FBFFCBAEEC7B0592E1 /* Pods-AKWelcomeKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BAD219C4B4030916A2740E2E5834D76 /* Pods-AKWelcomeKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D1627ACDB197B76D67CBC13A29971DC6 /* AKWelcomeKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 56487B0D4C79C050F25A1760221CC78B /* AKWelcomeKit-dummy.m */; };
 		DB710CE83AD9384182A6D96E065D2779 /* Pods-AKWelcomeKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 078E4525C3AB1175D30B762FF0A02308 /* Pods-AKWelcomeKit_Tests-dummy.m */; };
@@ -70,6 +71,7 @@
 		8A12276A25D0841B009A0E97 /* AKWKSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AKWKSettings.swift; path = AKWelcomeKit/Classes/AKWKSettings.swift; sourceTree = "<group>"; };
 		8A12276F25D0842A009A0E97 /* AKWKOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AKWKOverlay.swift; path = AKWelcomeKit/Classes/AKWKOverlay.swift; sourceTree = "<group>"; };
 		8A12277425D0843A009A0E97 /* AKWKPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AKWKPage.swift; path = AKWelcomeKit/Classes/AKWKPage.swift; sourceTree = "<group>"; };
+		8A1228EB25D1C936009A0E97 /* AKWKBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AKWKBackground.swift; path = AKWelcomeKit/Classes/AKWKBackground.swift; sourceTree = "<group>"; };
 		92E437D277F897C770FBA2127B61D9D2 /* AKWelcomeKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AKWelcomeKit.debug.xcconfig; sourceTree = "<group>"; };
 		96684E82DD7AC0458A91E028195378C1 /* Pods-AKWelcomeKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AKWelcomeKit_Example.modulemap"; sourceTree = "<group>"; };
 		97D5322DA5D96FC861DE808E9EAB0F17 /* Pods-AKWelcomeKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AKWelcomeKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -126,11 +128,12 @@
 				0183A937FB4BD70E76CD4F06614076BA /* Pod */,
 				6FB1DF6941F329DE6615C6AB332E007A /* Support Files */,
 				8A12274B25D083C2009A0E97 /* AKWKController.swift */,
-				8A12276225D08405009A0E97 /* AKWKView.swift */,
-				8A12275825D083E2009A0E97 /* AKWKProtocols.swift */,
-				8A12276A25D0841B009A0E97 /* AKWKSettings.swift */,
+				8A1228EB25D1C936009A0E97 /* AKWKBackground.swift */,
 				8A12276F25D0842A009A0E97 /* AKWKOverlay.swift */,
 				8A12277425D0843A009A0E97 /* AKWKPage.swift */,
+				8A12275825D083E2009A0E97 /* AKWKProtocols.swift */,
+				8A12276A25D0841B009A0E97 /* AKWKSettings.swift */,
+				8A12276225D08405009A0E97 /* AKWKView.swift */,
 			);
 			name = AKWelcomeKit;
 			path = ../..;
@@ -400,6 +403,7 @@
 				8A12275925D083E2009A0E97 /* AKWKProtocols.swift in Sources */,
 				8A12277025D0842A009A0E97 /* AKWKOverlay.swift in Sources */,
 				8A12276325D08405009A0E97 /* AKWKView.swift in Sources */,
+				8A1228EC25D1C936009A0E97 /* AKWKBackground.swift in Sources */,
 				D1627ACDB197B76D67CBC13A29971DC6 /* AKWelcomeKit-dummy.m in Sources */,
 				8A12274C25D083C2009A0E97 /* AKWKController.swift in Sources */,
 			);
@@ -548,7 +552,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				MODULEMAP_FILE = "Target Support Files/AKWelcomeKit/AKWelcomeKit.modulemap";
 				PRODUCT_MODULE_NAME = AKWelcomeKit;
 				PRODUCT_NAME = AKWelcomeKit;
@@ -646,7 +650,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				MODULEMAP_FILE = "Target Support Files/AKWelcomeKit/AKWelcomeKit.modulemap";
 				PRODUCT_MODULE_NAME = AKWelcomeKit;
 				PRODUCT_NAME = AKWelcomeKit;
