@@ -111,7 +111,6 @@ class AKWKView: UIView, UIScrollViewDelegate {
             }
             
             containerView.contentSize = CGSize(width: self.frame.width * CGFloat(pageCount), height: self.frame.height)
-            overlay?.page(count: self.pageCount)
         }
     }
     
@@ -125,6 +124,7 @@ class AKWKView: UIView, UIScrollViewDelegate {
                 self.overlay = overlay
                 self.overlay?.pageControl.addTarget(self, action: #selector(didTapPageControl), for: .valueChanged)
                 self.overlay?.continueButton.addTarget(self, action: #selector(continueAction), for: .touchUpInside)
+                overlay.page(count: self.pageCount)
             }
         }
     }
